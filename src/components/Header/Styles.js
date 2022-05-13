@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { IconContainer } from "../common/css";
 
 const Header = styled.header`
   align-items: center;
@@ -10,12 +11,6 @@ const Header = styled.header`
   @media (min-width: 960px) {
     justify-content: space-between;
     padding: 0 72px;
-  }
-`;
-
-const IconContainer = styled.div`
-  img {
-    width: 100%;
   }
 `;
 

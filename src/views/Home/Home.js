@@ -1,4 +1,4 @@
-import ListCard from "../../components/ListCard/ListCard";
+import { ListCard, CreateNewListCard } from "../../components/ListCard";
 import { H1, ListCardContainer } from "./Styles";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
         <ListCard />
         <ListCard />
         <ListCard />
-        <ListCard />
+        <CreateNewListCard />
       </ListCardContainer>
     </>
   );
