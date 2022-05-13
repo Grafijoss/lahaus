@@ -28,5 +28,6 @@ body {
 :root {
   --background-body: #ffffff;
   --background-gray: #e5f0ee;
-  --container-width: "942px";
+  --background-blue: #3ecfaf;
+  --container-width: 942px;
 }
