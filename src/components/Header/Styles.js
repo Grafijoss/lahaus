@@ -75,8 +75,13 @@ const MenuList = styled.ul`
 `;
 
 const MenuItem = styled.li`
+  color: var(--green-jungle);
+  cursor: pointer;
   font-size: 16px;
   margin-left: 40px;
+  &:hover {
+    color: var(--green-gray);
+  }
 `;
 
 const PerfilMenuItem = styled(MenuItem)`
