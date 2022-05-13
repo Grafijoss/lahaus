@@ -20,4 +20,10 @@ const H2 = styled.h2`
   line-height: 18px;
 `;
 
-export { H1, H2 };
+const P = styled.p`
+  color: var(--green-gray);
+  font-size: 14px;
+  font-weight: 400;
+`;
+
+export { H1, H2, P };

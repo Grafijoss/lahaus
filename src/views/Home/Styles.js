@@ -10,15 +10,15 @@ const H1 = styled(BaseH1)`
 const ListCardContainer = styled.div`
   display: grid;
   gap: 33px;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 292px);
   justify-content: center;
 
   @media (min-width: 640px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 292px);
   }
 
   @media (min-width: 960px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 292px);
   }
 `;
 
