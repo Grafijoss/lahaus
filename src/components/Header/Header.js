@@ -1,4 +1,3 @@
-import { withTheme } from "styled-components";
 import logo from "../../icons/logo.svg";
 import typo from "../../icons/typo.svg";
 import bars from "../../icons/bars.svg";
@@ -18,7 +17,7 @@ import {
   DropDownArrow
 } from "./Styles";
 
-const Header = ({ theme }) => {
+const Header = () => {
   return (
     <BaseHeader>
       <BurgerMenu hasNotifications>
@@ -52,4 +51,4 @@ const Header = ({ theme }) => {
   );
 };
 
-export default withTheme(Header);
+export default Header;
