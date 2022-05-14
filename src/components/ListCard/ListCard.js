@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { isEmptyArray } from "../../utils/core";
 import {
@@ -29,20 +30,21 @@ const ListCard = ({ name, entries }) => {
 
   useEffect(() => {
     if (!isEmptyArray(entries)) {
+      getImages()
       setImages(getImages());
     }
   }, [entries]);
 
   return (
-    <CardContainer>
+    <CardContainer data-testid="listcard">
       <ImagesContainer>
-        {images[0] && <FirstImage bg={images[0]} />}
+        {images[0] && <FirstImage data-testid="image-galery" bg={images[0]} />}
         {showInfoCounterImages && <InfoImages counter={InfoCounterImages} />}
-        {images[1] && <SecondImage bg={images[1]} />}
-        {images[2] && <ThirdImage bg={images[2]} />}
+        {images[1] && <SecondImage data-testid="image-galery" bg={images[1]} />}
+        {images[2] && <ThirdImage data-testid="image-galery" bg={images[2]} />}
       </ImagesContainer>
-      <H2>{name}</H2>
-      <P>{entries.length} propiedades guardadas</P>
+      <H2 data-testid="name">{name}</H2>
+      <P data-testid="entries">{entries?.length || 0} propiedades guardadas</P>
     </CardContainer>
   );
 };

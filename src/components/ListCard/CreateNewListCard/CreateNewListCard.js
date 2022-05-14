@@ -10,7 +10,7 @@ const CreateNewListCard = () => {
           <img src={plus} alt="" />
         </AddListIcon>
       </AddList>
-      <H2>Crear una nueva lista</H2>
+      <H2 data-testid="title">Crear una nueva lista</H2>
     </CardContainer>
   );
 };
