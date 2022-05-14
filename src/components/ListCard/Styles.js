@@ -1,6 +1,10 @@
 import styled, { css } from "styled-components";
 import { H2 as baseH2, P as baseP } from "../common/typography";
-import { occupiesAllTheSpace, backgroundCover } from "../common/css";
+import {
+  occupiesAllTheSpace,
+  backgroundCover,
+  textWithEllipsis
+} from "../common/css";
 
 const CardContainer = styled.article`
   overflow: hidden;
@@ -66,12 +70,6 @@ const ThirdImage = styled.div`
   ${GaleryImage}
   width: 80%;
   z-index: 2;
-`;
-
-const textWithEllipsis = css`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 `;
 
 const H2 = styled(baseH2)`

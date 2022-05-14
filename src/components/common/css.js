@@ -6,6 +6,12 @@ const IconContainer = styled.div`
   }
 `;
 
+const centerChildren = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const occupiesAllTheSpace = css`
   height: 100%;
   left: 0;
@@ -20,4 +26,16 @@ const backgroundCover = css`
   background-position: center;
 `;
 
-export { IconContainer, occupiesAllTheSpace, backgroundCover };
+const textWithEllipsis = css`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`;
+
+export {
+  IconContainer,
+  occupiesAllTheSpace,
+  backgroundCover,
+  textWithEllipsis,
+  centerChildren
+};

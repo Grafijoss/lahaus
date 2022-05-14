@@ -81,11 +81,15 @@ const MenuItem = styled.li`
 
 const PerfilMenuItem = styled(MenuItem)`
   align-items: center;
+  cursor: default;
   display: flex;
   font-weight: 500;
 `;
 
 const DropDownContainer = styled.div`
+  align-items: center;
+  cursor: pointer;
+  display: flex;
   position: relative;
 `;
 
@@ -96,6 +100,20 @@ const DropDownArrow = styled.div`
   &:after {
     right: -10px;
     top: -10px;
+  }
+`;
+
+const HeaderButton = styled.div`
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  &:hover {
+    background: var(--gray-light);
   }
 `;
 
@@ -110,5 +128,6 @@ export {
   MenuItem,
   PerfilMenuItem,
   DropDownContainer,
-  DropDownArrow
+  DropDownArrow,
+  HeaderButton
 };
