@@ -1,10 +1,12 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useMediaQuery } from "@react-hook/media-query";
 
 import logo from "../../icons/logo.svg";
 import typo from "../../icons/typo.svg";
 import bars from "../../icons/bars.svg";
 import arrow from "../../icons/arrow.svg";
 import DropDownMenu from "./DropDownMenu/DropDownMenu";
+import MenuResponsive from "./MenuResponsive/MenuResponsive";
 
 import {
   Header as BaseHeader,
@@ -23,8 +25,15 @@ import {
 
 const Header = () => {
   const [showPerfil, setShowPerfil] = useState(false);
+  const [showMenuMobile, setShowMenuMobile] = useState(false);
+
+  const isDesktop = useMediaQuery("only screen and (min-width: 960px)");
 
   const buttonRef = useRef(null);
+
+  const handlerOpenMenuMobile = () => setShowMenuMobile(true);
+
+  const handlerCloseMenuMobile = () => setShowMenuMobile(false);
 
   const tooglePerfilHandler = () => {
     setShowPerfil(!showPerfil);
@@ -34,9 +43,15 @@ const Header = () => {
     setShowPerfil(false);
   };
 
+  useEffect(() => {
+    if (isDesktop) {
+      handlerCloseMenuMobile();
+    }
+  }, [isDesktop]);
+
   return (
     <BaseHeader>
-      <BurgerMenu hasNotifications>
+      <BurgerMenu hasNotifications onClick={handlerOpenMenuMobile}>
         <img src={bars} alt="Icon del logo Lahaus" />
       </BurgerMenu>
       <LogoTypo>
@@ -48,33 +63,39 @@ const Header = () => {
         </Typo>
       </LogoTypo>
 
-      <Menu>
-        <MenuList>
-          <MenuItem>
-            <HeaderButton>Cundinamarca</HeaderButton>
-          </MenuItem>
-          <MenuItem>
-            <HeaderButton>Antioquia</HeaderButton>
-          </MenuItem>
-          <MenuItem>
-            <HeaderButton>Recursos</HeaderButton>
-          </MenuItem>
-          <PerfilMenuItem>
-            <DropDownContainer ref={buttonRef} onClick={tooglePerfilHandler}>
-              Mi Perfil
-              <DropDownArrow hasNotifications>
-                <img src={arrow} alt="Boton para abrir perfil" />
-              </DropDownArrow>
-              {showPerfil && (
-                <DropDownMenu
-                  buttonRef={buttonRef}
-                  closePerfilHandler={closePerfilHandler}
-                />
-              )}
-            </DropDownContainer>
-          </PerfilMenuItem>
-        </MenuList>
-      </Menu>
+      {!isDesktop && showMenuMobile && (
+        <MenuResponsive handlerCloseMenuMobile={handlerCloseMenuMobile} />
+      )}
+
+      {isDesktop && (
+        <Menu>
+          <MenuList>
+            <MenuItem>
+              <HeaderButton>Cundinamarca</HeaderButton>
+            </MenuItem>
+            <MenuItem>
+              <HeaderButton>Antioquia</HeaderButton>
+            </MenuItem>
+            <MenuItem>
+              <HeaderButton>Recursos</HeaderButton>
+            </MenuItem>
+            <PerfilMenuItem>
+              <DropDownContainer ref={buttonRef} onClick={tooglePerfilHandler}>
+                Mi Perfil
+                <DropDownArrow hasNotifications>
+                  <img src={arrow} alt="Boton para abrir perfil" />
+                </DropDownArrow>
+                {showPerfil && (
+                  <DropDownMenu
+                    buttonRef={buttonRef}
+                    closePerfilHandler={closePerfilHandler}
+                  />
+                )}
+              </DropDownContainer>
+            </PerfilMenuItem>
+          </MenuList>
+        </Menu>
+      )}
     </BaseHeader>
   );
 };

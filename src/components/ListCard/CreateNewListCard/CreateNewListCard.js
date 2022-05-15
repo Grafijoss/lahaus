@@ -7,7 +7,7 @@ const CreateNewListCard = () => {
     <CardContainer>
       <AddList>
         <AddListIcon>
-          <img src={plus} alt="" />
+          <img src={plus} alt="icono para agregar nueva coleccion" />
         </AddListIcon>
       </AddList>
       <H2 data-testid="title">Crear una nueva lista</H2>
