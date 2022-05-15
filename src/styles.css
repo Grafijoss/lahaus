@@ -1,29 +1,38 @@
 @import "./normalize.css";
 
-body {
-  font-family: "Silka Regular", "Fira Sans", "Helvetica Neue", sans-serif;
+/* Fonts
+   ========================================================================== */
+
+
+@font-face {
+  font-family: 'silkaregular';
+  src: url('./fonts/silka-regular-webfont.eot');
+  src: url('./fonts/silka-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/silka-regular-webfont.woff2') format('woff2'),
+       url('./fonts/silka-regular-webfont.woff') format('woff'),
+       url('./fonts/silka-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'silkasemibold';
+  src: url('./fonts/silka-semibold-webfont.eot');
+  src: url('./fonts/silka-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/silka-semibold-webfont.woff2') format('woff2'),
+       url('./fonts/silka-semibold-webfont.woff') format('woff'),
+       url('./fonts/silka-semibold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Fonts
    ========================================================================== */
 
-@font-face {
-  font-family: "Silka Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Silka Regular"), url("./fonts/Silka-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Silka Regular Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Silka Regular Italic"),
-    url("./fonts/Silka-RegularItalic.woff") format("woff");
-}
-
-/* Fonts
-   ========================================================================== */
+   body {
+    font-family: "silkaregular", "Fira Sans", "Helvetica Neue", sans-serif;
+  }
 
 :root {
   --background-body: #ffffff;

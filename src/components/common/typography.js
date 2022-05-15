@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const h1 = css`
   color: var(--green-jungle);
-  font-weight: 600;
+  font-family: 'silkasemibold';
 `;
 
 const H1 = styled.h1`
