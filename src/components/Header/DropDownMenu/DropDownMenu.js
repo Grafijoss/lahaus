@@ -12,7 +12,7 @@ const DropDownMenu = ({ closePerfilHandler, buttonRef }) => {
   }, [clickedOutside]);
 
   return (
-    <DropDownContainer ref={wrapperRef}>
+    <DropDownContainer ref={wrapperRef} data-testid="profile-dropdown">
       <Profile />
     </DropDownContainer>
   );

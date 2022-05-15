@@ -50,7 +50,7 @@ const Header = () => {
   }, [isDesktop]);
 
   return (
-    <BaseHeader>
+    <BaseHeader data-testid="header-container">
       <BurgerMenu hasNotifications onClick={handlerOpenMenuMobile}>
         <img src={bars} alt="Icon del logo Lahaus" />
       </BurgerMenu>
@@ -80,7 +80,7 @@ const Header = () => {
               <HeaderButton>Recursos</HeaderButton>
             </MenuItem>
             <PerfilMenuItem>
-              <DropDownContainer ref={buttonRef} onClick={tooglePerfilHandler}>
+              <DropDownContainer ref={buttonRef} onClick={tooglePerfilHandler} data-testid="open-perfil" >
                 Mi Perfil
                 <DropDownArrow hasNotifications>
                   <img src={arrow} alt="Boton para abrir perfil" />

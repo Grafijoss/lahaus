@@ -1,6 +1,6 @@
 import { render, cleanup } from '@testing-library/react';
 import {collection} from './__fixtures__'
-import ListCard from '../ListCard';
+import ListCard from './ListCard';
 
 afterEach(cleanup);
 
