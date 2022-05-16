@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/lahaus/static/css/main.e23b40f4.chunk.css",
+    "main.js": "/lahaus/static/js/main.62e80a96.chunk.js",
+    "main.js.map": "/lahaus/static/js/main.62e80a96.chunk.js.map",
+    "runtime-main.js": "/lahaus/static/js/runtime-main.ed62cf59.js",
+    "runtime-main.js.map": "/lahaus/static/js/runtime-main.ed62cf59.js.map",
+    "static/js/2.48d4119f.chunk.js": "/lahaus/static/js/2.48d4119f.chunk.js",
+    "static/js/2.48d4119f.chunk.js.map": "/lahaus/static/js/2.48d4119f.chunk.js.map",
+    "index.html": "/lahaus/index.html",
+    "static/css/main.e23b40f4.chunk.css.map": "/lahaus/static/css/main.e23b40f4.chunk.css.map",
+    "static/js/2.48d4119f.chunk.js.LICENSE.txt": "/lahaus/static/js/2.48d4119f.chunk.js.LICENSE.txt",
+    "static/media/arrow.5379dfe7.svg": "/lahaus/static/media/arrow.5379dfe7.svg",
+    "static/media/bars.43155e12.svg": "/lahaus/static/media/bars.43155e12.svg",
+    "static/media/logo.13891ea2.svg": "/lahaus/static/media/logo.13891ea2.svg",
+    "static/media/plus.ce0018ed.svg": "/lahaus/static/media/plus.ce0018ed.svg",
+    "static/media/styles.css": "/lahaus/static/media/silka-semibold-webfont.d4ef0c3b.eot",
+    "static/media/typo.8de4ad9f.svg": "/lahaus/static/media/typo.8de4ad9f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ed62cf59.js",
+    "static/js/2.48d4119f.chunk.js",
+    "static/css/main.e23b40f4.chunk.css",
+    "static/js/main.62e80a96.chunk.js"
+  ]
+}
