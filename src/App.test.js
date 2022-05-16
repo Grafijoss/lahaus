@@ -5,7 +5,6 @@ import '@testing-library/jest-dom';
 
 import App from './App'
 
-
 describe('App', () => {
     window.matchMedia = window.matchMedia || function() {
         return {

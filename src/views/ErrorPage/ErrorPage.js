@@ -1,3 +1,4 @@
+import {Helmet} from 'react-helmet';
 import {
     NotFoundContainer,
     H1,
@@ -6,6 +7,9 @@ import {
 const ErrorPage = () => {
     return(
         <NotFoundContainer>
+            <Helmet>
+                <title>¡Oops! La página no existe</title>
+            </Helmet>
             <H1>¡Oops! La página no existe</H1>
         </NotFoundContainer>
     )
