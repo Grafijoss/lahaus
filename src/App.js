@@ -8,7 +8,8 @@ export default function App() {
   return (
     <AppLayout>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" component={<Home />} />
+        <Route path="/lahaus/" element={<Home />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </AppLayout>
