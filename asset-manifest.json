@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/lahaus/static/css/main.e23b40f4.chunk.css",
-    "main.js": "/lahaus/static/js/main.62e80a96.chunk.js",
-    "main.js.map": "/lahaus/static/js/main.62e80a96.chunk.js.map",
+    "main.js": "/lahaus/static/js/main.bd89bf51.chunk.js",
+    "main.js.map": "/lahaus/static/js/main.bd89bf51.chunk.js.map",
     "runtime-main.js": "/lahaus/static/js/runtime-main.ed62cf59.js",
     "runtime-main.js.map": "/lahaus/static/js/runtime-main.ed62cf59.js.map",
     "static/js/2.48d4119f.chunk.js": "/lahaus/static/js/2.48d4119f.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.ed62cf59.js",
     "static/js/2.48d4119f.chunk.js",
     "static/css/main.e23b40f4.chunk.css",
-    "static/js/main.62e80a96.chunk.js"
+    "static/js/main.bd89bf51.chunk.js"
   ]
 }
