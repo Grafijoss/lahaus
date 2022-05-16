@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
+import { Link } from 'react-router-dom';
 
 import logo from "../../icons/logo.svg";
 import typo from "../../icons/typo.svg";
@@ -54,14 +55,16 @@ const Header = () => {
       <BurgerMenu hasNotifications onClick={handlerOpenMenuMobile}>
         <img src={bars} alt="Icon del logo Lahaus" />
       </BurgerMenu>
-      <LogoTypo>
-        <Logo>
-          <img src={logo} alt="Icon del logo Lahaus" />
-        </Logo>
-        <Typo>
-          <img src={typo} alt="Typo del logo Lahaus" />
-        </Typo>
-      </LogoTypo>
+      <Link to='/'>
+        <LogoTypo>
+          <Logo>
+            <img src={logo} alt="Icon del logo Lahaus" />
+          </Logo>
+          <Typo>
+            <img src={typo} alt="Typo del logo Lahaus" />
+          </Typo>
+        </LogoTypo>
+      </Link>
 
       {!isDesktop && showMenuMobile && (
         <MenuResponsive handlerCloseMenuMobile={handlerCloseMenuMobile} />
