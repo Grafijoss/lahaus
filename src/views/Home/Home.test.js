@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { render, act } from '@testing-library/react';
+import { MemoryRouter } from "react-router-dom";
 import Home from './Home'
 import { fullResponse } from './__fixtures__'
 
@@ -9,7 +10,11 @@ describe('Home', () => {
     test('Should render correctly with data', async () => {
         axios.mockResolvedValue({ data: fullResponse });
         const promise = Promise.resolve() 
-        const container = render(<Home />)
+        const container = render(
+            <MemoryRouter>
+                <Home />
+            </MemoryRouter>
+        )
 
         await act(async () => { await promise })
 

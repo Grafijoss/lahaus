@@ -23,13 +23,10 @@ describe('App', () => {
     })
 
     test('estate detail should render correctly', () => {
-        const history = createMemoryHistory();
-        history.push('/estates/12345')
-
         render(
-            <Router location={history.location}>
+            <MemoryRouter initialEntries={['/estates/12345']}>
                 <App />
-            </Router>
+            </MemoryRouter>
         )
         expect(screen.getByTestId('estate-detail')).toBeInTheDocument()
     })
