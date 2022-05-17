@@ -1,4 +1,5 @@
 import { render, fireEvent } from '@testing-library/react';
+import { MemoryRouter } from "react-router-dom";
 import Header from './Header';
 
 describe('Header', () => {
@@ -12,13 +13,21 @@ describe('Header', () => {
     };
 
    test('Should render correctly', () => {
-       const container = render(<Header />);
+       const container = render(
+           <MemoryRouter>
+               <Header />
+           </MemoryRouter>
+        );
        const header = container.getByTestId('header-container');
        expect(header).toBeInTheDocument();
    })
 
    test('Should open the profile dropdown menu when clicked', async () => {
-    const {getByTestId} = render(<Header />);
+    const {getByTestId} = render(
+        <MemoryRouter>
+            <Header />
+        </MemoryRouter>
+     );
     
     const headerContainer = getByTestId('header-container');
     
