@@ -22,6 +22,17 @@ describe('App', () => {
         expect(screen.getByText(/Listas de favoritos/i)).toBeInTheDocument()
     })
 
+    test('estate detail should render correctly', async () => {
+        render(
+            <MemoryRouter initialEntries={['/estates/43148']}>
+                <App />
+            </MemoryRouter>
+        )
+        expect(screen.getByTestId('estate-detail')).toBeInTheDocument();
+        await screen.findByText('Mis favoritos')
+        screen.debug();
+    })
+
     test('Error Page', () => {
         render(
             <MemoryRouter initialEntries={['/bad-route']}>
