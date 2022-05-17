@@ -26,6 +26,18 @@ describe('App', () => {
         expect(screen.getByText(/Listas de favoritos/i)).toBeInTheDocument()
     })
 
+    test('estate detail should render correctly', () => {
+        const history = createMemoryHistory();
+        history.push('/estates/12345')
+
+        render(
+            <Router location={history.location}>
+                <App />
+            </Router>
+        )
+        expect(screen.getByTestId('estate-detail')).toBeInTheDocument()
+    })
+
     test('Error Page', () => {
         const history = createMemoryHistory();
         history.push('/bad-route')

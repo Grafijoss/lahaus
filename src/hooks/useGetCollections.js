@@ -2,13 +2,19 @@ import { useEffect, useState } from "react";
 import { getAll } from "../services";
 
 export default function useGetStates() {
-  const [collections, getCollections] = useState([]);
+  const [collections, setCollections] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const fetchEstatesData = async () => {
+    setLoading(true);
     try {
       const res = await getAll();
-      getCollections(res);
+      setCollections(res);
+      setLoading(false);
     } catch (err) {
+      setLoading(false);
+      setError(true);
       console.log(`Error llamando al servicio ${err}`);
     }
   };
@@ -17,6 +23,8 @@ export default function useGetStates() {
     fetchEstatesData();
   }, []);
   return {
-    collections
+    collections: collections || [],
+    loading,
+    error
   };
 }
