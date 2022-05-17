@@ -1,6 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import {Router} from 'react-router-dom';
-import {createMemoryHistory} from 'history';
+import {MemoryRouter} from 'react-router-dom';
 import '@testing-library/jest-dom';
 
 import App from './App'
@@ -15,25 +14,19 @@ describe('App', () => {
     };
 
     test('full app rendering/navigating', () => {
-        const history = createMemoryHistory();
-        history.push('/')
-
         render(
-            <Router location={history.location}>
+            <MemoryRouter initialEntries={['/']}>
                 <App />
-            </Router>
+            </MemoryRouter>,
         )
         expect(screen.getByText(/Listas de favoritos/i)).toBeInTheDocument()
     })
 
     test('Error Page', () => {
-        const history = createMemoryHistory();
-        history.push('/bad-route')
-
         render(
-            <Router location={history.location}>
+            <MemoryRouter initialEntries={['/bad-route']}>
                 <App />
-            </Router>
+            </MemoryRouter>,
         )
         expect(screen.getByText(/¡Oops! La página no existe/i)).toBeInTheDocument()
     })

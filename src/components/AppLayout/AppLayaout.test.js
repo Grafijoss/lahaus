@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import AppLayout from './AppLayout';
 
 describe('AppLayout', () => {
@@ -13,7 +14,13 @@ describe('AppLayout', () => {
     
     test('Should render correctly', () => {
         
-        const container = render(<AppLayout><div data-testid="children">CHILDREN</div></AppLayout>)
+        const container = render(
+            <MemoryRouter>
+                <AppLayout>
+                    <div data-testid="children">CHILDREN</div>
+                </AppLayout>
+            </MemoryRouter>
+        )
         const children = container.getByTestId('children');
 
         expect(children).toBeInTheDocument();
